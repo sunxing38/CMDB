@@ -13,7 +13,11 @@ import java.util.List;
 public interface CmdbUserService {
     List<CmdbUser> selectAll();
 
-    List<CmdbUser> selectById(int id);
+    CmdbUser selectById(int id);
 
     void addUser(CmdbUser cmdbUser);
+
+    int deleteUser(int id);
+
+    int updateUser(CmdbUser cmdbUser);
 }

@@ -28,13 +28,25 @@ public class CmdbUserServiceImpl implements CmdbUserService {
     }
 
     @Override
-    public List<CmdbUser> selectById(int id) {
-        return cmdbUserMapper.selectByExample(id);
+    public CmdbUser selectById(int id) {
+        return cmdbUserMapper.selectByPrimaryKey(id);
     }
 
     @Override
     //管理员添加新用户
     public void addUser(CmdbUser cmdbUser) {
         cmdbUserMapper.insertSelective(cmdbUser);
+    }
+
+    //管理员删除用户(注销)
+
+    @Override
+    public int deleteUser(int id) {
+        return cmdbUserMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateUser(CmdbUser cmdbUser) {
+        return cmdbUserMapper.updateByPrimaryKeySelective(cmdbUser);
     }
 }
