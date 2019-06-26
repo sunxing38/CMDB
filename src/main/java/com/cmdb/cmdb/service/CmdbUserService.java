@@ -14,4 +14,6 @@ public interface CmdbUserService {
     List<CmdbUser> selectAll();
 
     List<CmdbUser> selectById(int id);
+
+    void addUser(CmdbUser cmdbUser);
 }

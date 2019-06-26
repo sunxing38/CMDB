@@ -9,17 +9,17 @@ public class CmdbUser {
 
     private String name;
 
-    private Integer roleId;
+    private Integer role_Id;
 
-    private Integer creatorId;
+    private Integer creator_Id;
 
-    private String eMail;
+    private String e_Mail;
 
     private Long phone;
 
     private Integer flag;
 
-    private Integer receiveMessages;
+    private Integer receive_Messages;
 
     public Integer getId() {
         return id;
@@ -54,27 +54,27 @@ public class CmdbUser {
     }
 
     public Integer getRoleId() {
-        return roleId;
+        return role_Id;
     }
 
     public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
+        this.role_Id = roleId;
     }
 
     public Integer getCreatorId() {
-        return creatorId;
+        return creator_Id;
     }
 
     public void setCreatorId(Integer creatorId) {
-        this.creatorId = creatorId;
+        this.creator_Id = creatorId;
     }
 
     public String geteMail() {
-        return eMail;
+        return e_Mail;
     }
 
     public void seteMail(String eMail) {
-        this.eMail = eMail == null ? null : eMail.trim();
+        this.e_Mail = eMail == null ? null : eMail.trim();
     }
 
     public Long getPhone() {
@@ -94,10 +94,10 @@ public class CmdbUser {
     }
 
     public Integer getReceiveMessages() {
-        return receiveMessages;
+        return receive_Messages;
     }
 
     public void setReceiveMessages(Integer receiveMessages) {
-        this.receiveMessages = receiveMessages;
+        this.receive_Messages = receiveMessages;
     }
 }

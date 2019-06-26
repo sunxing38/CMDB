@@ -20,7 +20,9 @@ public class CmdbUserServiceImpl implements CmdbUserService {
 
     @Autowired
     private CmdbUserMapper cmdbUserMapper;
+
     @Override
+    //管理员查询用户
     public List<CmdbUser> selectAll() {
         return cmdbUserMapper.selectAll();
     }
@@ -28,5 +30,11 @@ public class CmdbUserServiceImpl implements CmdbUserService {
     @Override
     public List<CmdbUser> selectById(int id) {
         return cmdbUserMapper.selectByExample(id);
+    }
+
+    @Override
+    //管理员添加新用户
+    public void addUser(CmdbUser cmdbUser) {
+        cmdbUserMapper.insertSelective(cmdbUser);
     }
 }

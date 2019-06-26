@@ -3,6 +3,7 @@ package com.cmdb.cmdb.controller;
 import com.cmdb.cmdb.entity.CmdbUser;
 import com.cmdb.cmdb.service.CmdbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,5 +27,10 @@ public class CmdbUserController {
     @RequestMapping("/getUser")
     public List<CmdbUser> getUser(){
         return  cmdbUserService.selectAll();
+    }
+
+    @RequestMapping("/addUser")
+    public void addUser(@RequestBody CmdbUser cmdbUser){
+        cmdbUserService.addUser(cmdbUser);
     }
 }
